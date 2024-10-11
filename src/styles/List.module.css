@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+.listContainer {
+  display: grid;
+  grid-auto-flow: column; /* Hace que los elementos fluyan en columnas */
+  grid-auto-flow: row;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f8f0ff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  font-family: 'Poppins', sans-serif;
+}
+
+.listHeader {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.listHeader h2 {
+  color: #6a0dad;
+  font-size: 28px;
+  font-weight: 600;
+}
+
+.list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.listItem {
+  display: grid;
+  grid-auto-flow: column; /* Hace que los elementos fluyan en columnas */
+  grid-template-columns: repeat(auto-fill, max(200px, 1fr)); /* Crea columnas dinámicas que se ajustan automáticamente */
+  gap: 15px; /* Espacio entre las columnas */
+  background-color: #fff;
+  justify-content: space-around;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 15px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.listItem:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.info {
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.label {
+  display: block;
+  font-weight: 600;
+  color: #6a0dad;
+  margin-bottom: 5px;
+}
+
+.value {
+  color: #333;
+  font-size: 16px;
+}
+
+.input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #d4b5ff;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.buttonContainer {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 15px;
+}
+
+.editButton,
+.saveButton,
+.deleteButton {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.editButton {
+  background-color: #9370db;
+  color: #fff;
+  margin-right: 10px;
+}
+
+.editButton:hover {
+  background-color: #8a2be2;
+}
+
+.saveButton {
+  background-color: #4caf50;
+  color: #fff;
+  margin-right: 10px;
+}
+
+.saveButton:hover {
+  background-color: #45a049;
+}
+
+.deleteButton {
+  background-color: #f44336;
+  color: #fff;
+}
+
+.deleteButton:hover {
+  background-color: #d32f2f;
+}
+
+@media (max-width: 768px) {
+  .listContainer {
+      padding: 15px;
+  }
+
+  .listHeader h2 {
+      font-size: 24px;
+  }
+
+  .listItem {
+      padding: 15px;
+  }
+
+  .buttonContainer {
+      flex-direction: column;
+  }
+
+  .editButton,
+  .saveButton,
+  .deleteButton {
+      width: 100%;
+      margin-right: 0;
+      margin-bottom: 10px;
+  }
+}

@@ -1,0 +1,208 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+:root {
+  --primary-color-home: #ead5f7;
+  --secondary-color: #bb93fb;
+  --accent-color: #2b044d;
+  --text-color: #333333;
+  --background-color: #ffffff;
+}
+
+.pageContainer {
+  font-family: 'Poppins', sans-serif;
+  color: var(--text-color);
+  background-color: var(--background-color);
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  background-color: var(--primary-color-home);
+  padding: 1rem 0;
+  border-radius: 5px;
+}
+
+.mainNav {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.navContent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo a {
+  text-decoration: none;
+  color: var(--accent-color);
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.primaryNav .navLinks {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.primaryNav .navLinks li {
+  margin: 0 1rem;
+}
+
+.primaryNav .navLinks a {
+  text-decoration: none;
+  color: var(--text-color);
+  font-weight: 400;
+  transition: color 0.3s ease;
+}
+
+.primaryNav .navLinks a:hover {
+  color: var(--accent-color);
+}
+
+.navUtilities {
+  display: flex;
+  align-items: center;
+}
+
+.searchBox {
+  display: flex;
+  margin-right: 1rem;
+}
+
+.searchBox input {
+  padding: 0.5rem;
+  border: 1px solid var(--secondary-color);
+  border-radius: 4px;
+  outline: none;
+}
+
+.searchButton {
+  background-color: var(--accent-color);
+  color: white;
+  border: none;
+  padding: 0.5rem;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.navIcons {
+  display: flex;
+}
+
+.iconButton {
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-left: 1rem;
+  position: relative;
+}
+
+.badge {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  background-color: var(--accent-color);
+  color: white;
+  border-radius: 50%;
+  padding: 2px 5px;
+  font-size: 0.7rem;
+}
+
+.mainContent {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.featuredProducts {
+  margin-top: 2rem;
+}
+
+.productGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.productCard {
+  background-color: var(--primary-color-home);
+  border-radius: 8px;
+  padding: 1rem;
+  text-align: center;
+}
+
+.productCard img {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+
+.productCard h4 {
+  margin: 0.5rem 0;
+}
+
+.productCard button {
+  background-color: var(--accent-color);
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.productCard button:hover {
+  background-color: var(--secondary-color);
+}
+
+.footer {
+  background-color: var(--primary-color-home);
+  color: var(--text-color);
+  text-align: center;
+  padding: 1rem 0;
+  margin-top: 2rem;
+}
+
+@media (max-width: 768px) {
+  .navContent {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .logo {
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+
+  .primaryNav .navLinks {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .primaryNav .navLinks li {
+    margin: 0.5rem 0;
+  }
+
+  .navUtilities {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .searchBox {
+    margin-right: 0;
+    margin-bottom: 1rem;
+  }
+
+  .navIcons {
+    justify-content: center;
+  }
+
+  .productGrid {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  }
+}
